@@ -358,3 +358,35 @@
   margin: 0;
   padding: 0;
 }
+
+.vacancies__company-location_place_description {
+  margin-left: 11px;
+  padding-left: 14px;
+  border-left: solid #9AAAB5 1px;
+  padding-bottom: 0;
+}
+
+.vacancies__payment {
+  margin: 0;
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+}
+
+.vacancies__text-box {
+  margin: 0;
+  padding-left: 41px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: calc(20 / 14);
+}
+
+.vacancies__list-name {
+  font-weight: bold;
+}
+
+.vacancies__skill-list {
+  list-style: none;
+  padding-left: 0;
+}
