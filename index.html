@@ -126,30 +126,35 @@
       <section class="vacancies">
         <ul class="vacancies__list">
 
-          <li class="vacancies__element">
-            <img src="img/company-logo-1.svg" class="vacancies__logo" alt="Company Logo" />
-            <ul class="vacancies__content-box">
-              <li class="vacancies__company-name">Интернет Люди</li>
-              <li class="vacancies__job-name">Front-end Разработчик</li>
-              <li class="vacancies__company-location">Москва</li>
-              <li>
-                <ul class="vacancies__job-skills">
-                  <li class="vacancies__job-skill vacancies__job-skill_position_new-row">jQuery</li>
-                  <li class="vacancies__job-skill">JavaScript</li>
-                  <li class="vacancies__job-skill">CSS3</li>
-                  <li class="vacancies__job-skill">React</li>
-                  <li class="vacancies__job-skill">Git</li>
-                  <li class="vacancies__job-skill vacancies__job-skill_position_new-row">Vue</li>
-                  <li class="vacancies__job-skill">Flexbox</li>
-                  <li class="vacancies__job-skill">HTML5</li>
-                </ul>
-              </li>
-            </ul>
-            <div class="vacancies__like-box">
-              <button type="button" class="vacancies__like-button"><img src="img/like-button-off.svg" alt="Нравится"></button>
-              <p class="vacancies__job-date">29/03/2021</p>
-            </div>
-          </li>
+          <template class="card">
+            <li class="vacancies__element">
+              <img src="img/company-logo-1.svg" class="vacancies__logo" alt="Company Logo" />
+              <ul class="vacancies__content-box">
+                <li class="vacancies__company-name">Интернет Люди</li>
+                <li class="vacancies__job-name">Front-end Разработчик</li>
+                <li class="vacancies__company-location">Москва</li>
+                <li>
+                  <ul class="vacancies__job-skills">
+                    <li class="vacancies__job-skill vacancies__job-skill_position_new-row">jQuery</li>
+                    <li class="vacancies__job-skill">JavaScript</li>
+                    <li class="vacancies__job-skill">CSS3</li>
+                    <li class="vacancies__job-skill">React</li>
+                    <li class="vacancies__job-skill">Git</li>
+                    <li class="vacancies__job-skill vacancies__job-skill_position_new-row">Vue</li>
+                    <li class="vacancies__job-skill">Flexbox</li>
+                    <li class="vacancies__job-skill">HTML5</li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="vacancies__like-box">
+                <button type="button" class="vacancies__like-button"><img src="img/like-button-off.svg" alt="Нравится"></button>
+                <p class="vacancies__job-date">29/03/2021</p>
+              </div>
+            </li>
+          </template>
+
+
+
 
           <li class="vacancies__element">
             <img src="img/company-logo-2.svg" class="vacancies__logo" alt="Company Logo" />
@@ -280,5 +285,6 @@
         </div>
       </section>
   </div>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
