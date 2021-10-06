@@ -5,6 +5,38 @@ const selectWorkExperienceButton = document.querySelector('.search-bar__button_p
 const selectPaymentButton = document.querySelector('.search-bar__button_position_fifth'); // выбираем в проекте класс кнопки "Выбрать размер оплаты";
 const templateElement = document.querySelector('.card'); // выбираем в проекте класс шаблона карточки;
 const cardsContainer = document.querySelector('.vacancies__list');
+const cardDescriptionLogoCompany = document.querySelector('.vacancies__logo_place_description');
+const cardDescriptionJobTitle = document.querySelector('.vacancies__job-name_place_description');
+const cardDescriptionNameCompany = document.querySelector('.vacancies__company-name_place_description');
+const cardDescriptionLocation = document.querySelector('.vacancies__company-location_place_description');
+const cardDescriptionPayment = document.querySelector('.vacancies__payment');
+const cardDescriptionFirstText = document.querySelector('.vacancies__text_position_first');
+const cardDescriptionSecondText = document.querySelector('.vacancies__text_position_second');
+const cardDescriptionThirdText = document.querySelector('.vacancies__text_position_third');
+const cardDescriptionFourthText = document.querySelector('.vacancies__text_position_fourth');
+const cardDescriptionSkillList = document.querySelector('.vacancies__list-name');
+const cardDescriptionHardSkillList = document.querySelector('.vacancies__list-name_position_second');
+const cardDescriptionConditionsList = document.querySelector('.vacancies__list-name_position_third');
+const cardDescriptionSkillOne = document.querySelector('.vacancies__list-item_position_first');
+const cardDescriptionSkillTwo = document.querySelector('.vacancies__list-item_position_second');
+const cardDescriptionSkillThree = document.querySelector('.vacancies__list-item_position_third');
+const cardDescriptionSkillFour = document.querySelector('.vacancies__list-item_position_fourth');
+const cardDescriptionHardSkillOne = document.querySelector('.vacancies__list-item_order_first');
+const cardDescriptionHardSkillTwo = document.querySelector('.vacancies__list-item_order_second');
+const cardDescriptionHardSkillThree = document.querySelector('.vacancies__list-item_order_third');
+const cardDescriptionHardSkillFour = document.querySelector('.vacancies__list-item_order_fourth');
+const cardDescriptionHardSkillFive = document.querySelector('.vacancies__list-item_order_fifth');
+const cardDescriptionHardSkillSix = document.querySelector('.vacancies__list-item_order_sixth');
+const cardDescriptionHardSkillSeven = document.querySelector('.vacancies__list-item_order_seventh');
+const cardDescriptionConditionOne = document.querySelector('.vacancies__list-item_last_first');
+const cardDescriptionConditionTwo = document.querySelector('.vacancies__list-item_last_second');
+const cardDescriptionConditionThree = document.querySelector('.vacancies__list-item_last_three');
+const cardDescriptionConditionFour = document.querySelector('.vacancies__list-item_last_four');
+const cardDescriptionLastParagrathOne = document.querySelector('.vacancies__text_last_one');
+const cardDescriptionLastParagrathTwo = document.querySelector('.vacancies__text_last_two');
+
+
+
 
 
 const initialCards = [
@@ -62,7 +94,7 @@ const initialCards = [
     fourthSkill: 'JS ES6',
     fifthSkill: 'Git',
     sixthSkill: 'Node',
-    seventhSkill: 'WebPack',
+    seventhSkill: 'TypeScript',
   },
   {
     title: 'Frontend developer (Vue, React)',
@@ -107,6 +139,167 @@ const initialCards = [
     seventhSkill: 'WebPack',
   },
 ]
+
+
+
+
+const cardDescription = [
+  {
+    name: 'Интернет Люди',
+    payment: 'От 150 000 до 300 000 руб.',
+    firstParagrath: 'Мы занимаемся разработкой инновационных решений в области цифрового контента.',
+    secondParagrath: 'Для создания наших продуктов используются передовые технологии, среди которых: Computer Vision, Unreal Engine, Ultra Low Latency Video Streaming. У нас очень крутой и суперсовременный технопарк - от камер и света, до графических карт, которые почти невозможно найти.',
+    thirdParagrath: 'Сегодня мы на стадии активного развития. Мы создаём масштабный, технологически сложный и в тоже время очень интересный, глобальный проект - частью которого можете стать Вы!',
+    skillsTitle: 'И если у Вас есть:',
+    skillOne: 'опыт коммерческой разработки на JavaScript от 2 лет;',
+    skillTwo: 'опыт коммерческой разработки на React от 2 лет;',
+    skillThree: 'опыт работы в команде с git;',
+    skillFour: 'опыт работы с любым сборщиком (webpack, gulp и т.д.).',
+    fourthParagrath: '…то Вы именно тот, кого мы ищем!',
+    hardSkillsTitle: 'Обязательные знания:',
+    conditionsListTitle: 'После испытательного срока мы предлагаем:',
+    conditionOne: 'возможную релокацию в столицу Латвии с помощью в оформлении всех необходимых документов;',
+    conditionTwo: 'бесплатную стоянку рядом с современным офисом в центре города;',
+    conditionThree: 'медицинскую страховку;',
+    conditionFour: 'абонемент в спортивный зал.',
+    fifthParagrath: 'Наша сила - в отсутствии бюрократии, легаси кода, чайка менеджмента, бизнеса, который уже не знает, чего хочет.',
+    sixthParagrath: 'Мы за нестандартные идеи, профессиональный и творческий подход, отличные отношения в коллективе и результат.',
+  },
+  {
+    name: 'GOOD CALL DEVELOPMENT',
+    payment: 'От 280 000 до 400 000 руб.',
+    firstParagrath: 'Мы занимаемся разработкой дизайнерских сайтов, и т.д. и т.п.',
+    secondParagrath: 'Для создания наших продуктов используются передовые технологии, среди которых: Computer Vision, Unreal Engine, Ultra Low Latency Video Streaming. У нас очень крутой и суперсовременный технопарк - от камер и света, до графических карт, которые почти невозможно найти.',
+    thirdParagrath: 'Сегодня мы на стадии активного развития. Мы создаём масштабный, технологически сложный и в тоже время очень интересный, глобальный проект - частью которого можете стать Вы!',
+    skillsTitle: 'Вам необходимо иметь:',
+    skillOne: 'опыт коммерческой разработки на JavaScript от 2 лет;',
+    skillTwo: 'опыт коммерческой разработки на React от 2 лет;',
+    skillThree: 'опыт работы в команде с git;',
+    skillFour: 'опыт работы с любым сборщиком (webpack, gulp и т.д.).',
+    fourthParagrath: '',
+    hardSkillsTitle: 'Обязательные знания:',
+    conditionsListTitle: 'После испытательного срока мы предлагаем:',
+    conditionOne: 'возможную релокацию в столицу;',
+    conditionTwo: 'бесплатную стоянку рядом с современным офисом в центре города;',
+    conditionThree: 'медицинскую страховку;',
+    conditionFour: 'абонемент в спортивный зал.',
+    fifthParagrath: 'Наша сила - в отсутствии бюрократии, легаси кода, чайка менеджмента, бизнеса, который уже не знает, чего хочет.',
+    sixthParagrath: 'Мы за нестандартные идеи, профессиональный и творческий подход, отличные отношения в коллективе и результат.',
+  },
+  {
+    name: 'Winfinity',
+    payment: 'От 100 000 до 200 000 руб.',
+    firstParagrath: 'Мы занимаемся разработкой инновационных решений в области цифрового контента.',
+    secondParagrath: 'Для создания наших продуктов используются передовые технологии, среди которых: Computer Vision, Unreal Engine, Ultra Low Latency Video Streaming. У нас очень крутой и суперсовременный технопарк - от камер и света, до графических карт, которые почти невозможно найти.',
+    thirdParagrath: 'Сегодня мы на стадии активного развития. Мы создаём масштабный, технологически сложный и в тоже время очень интересный, глобальный проект - частью которого можете стать Вы!',
+    skillsTitle: 'Вам нужно иметь:',
+    skillOne: 'опыт коммерческой разработки на JavaScript от 1 года;',
+    skillTwo: 'опыт коммерческой разработки на React от 1 года;',
+    skillThree: 'опыт работы в команде с git;',
+    skillFour: 'опыт работы с webpack',
+    fourthParagrath: '…остальному - научим!',
+    hardSkillsTitle: 'Необходимо знание следующих стеков:',
+    conditionsListTitle: 'После испытательного срока мы предлагаем:',
+    conditionOne: 'возможную релокацию в любой из крупнейших городов России;',
+    conditionTwo: 'бесплатную стоянку рядом с современным офисом в центре города;',
+    conditionThree: 'медицинскую страховку;',
+    conditionFour: 'абонемент в спортивный зал.',
+    fifthParagrath: 'Наша сила - в отсутствии бюрократии, легаси кода, чайка менеджмента, бизнеса, который уже не знает, чего хочет.',
+    sixthParagrath: 'Мы за нестандартные идеи, профессиональный и творческий подход, отличные отношения в коллективе и результат.',
+  },
+  {
+    name: 'Diagnocat',
+    payment: 'От 200 000 до 250 000 руб.',
+    firstParagrath: 'Мы занимаемся разработкой инновационных решений в области цифрового контента.',
+    secondParagrath: 'Для создания наших продуктов используются передовые технологии, среди которых: Computer Vision, Unreal Engine, Ultra Low Latency Video Streaming. У нас очень крутой и суперсовременный технопарк - от камер и света, до графических карт, которые почти невозможно найти.',
+    thirdParagrath: 'Сегодня мы на стадии активного развития. Мы создаём масштабный, технологически сложный и в тоже время очень интересный, глобальный проект - частью которого можете стать Вы!',
+    skillsTitle: 'Вам нужно иметь:',
+    skillOne: 'опыт коммерческой разработки на JavaScript от 1 года;',
+    skillTwo: 'опыт коммерческой разработки на React от 1 года;',
+    skillThree: 'опыт работы в команде с git;',
+    skillFour: 'опыт работы с webpack',
+    fourthParagrath: '…остальному - научим!',
+    hardSkillsTitle: 'Необходимо знание следующих стеков:',
+    conditionsListTitle: 'После испытательного срока мы предлагаем:',
+    conditionOne: 'возможную релокацию в любой из крупнейших городов России;',
+    conditionTwo: 'бесплатную стоянку рядом с современным офисом в центре города;',
+    conditionThree: 'медицинскую страховку;',
+    conditionFour: 'абонемент в спортивный зал.',
+    fifthParagrath: 'Наша сила - в отсутствии бюрократии, легаси кода, чайка менеджмента, бизнеса, который уже не знает, чего хочет.',
+    sixthParagrath: 'Мы за нестандартные идеи, профессиональный и творческий подход, отличные отношения в коллективе и результат.',
+  },
+  {
+    name: 'IT-Port',
+    payment: 'От 90 000 до 130 000 руб.',
+    firstParagrath: 'Мы занимаемся разработкой инновационных решений в области цифрового контента.',
+    secondParagrath: 'Для создания наших продуктов используются передовые технологии, среди которых: Computer Vision, Unreal Engine, Ultra Low Latency Video Streaming. У нас очень крутой и суперсовременный технопарк - от камер и света, до графических карт, которые почти невозможно найти.',
+    thirdParagrath: 'Сегодня мы на стадии активного развития. Мы создаём масштабный, технологически сложный и в тоже время очень интересный, глобальный проект - частью которого можете стать Вы!',
+    skillsTitle: 'Вам нужно иметь:',
+    skillOne: 'опыт коммерческой разработки на JavaScript от 1 года;',
+    skillTwo: 'опыт коммерческой разработки на React от 1 года;',
+    skillThree: 'опыт работы в команде с git;',
+    skillFour: 'опыт работы с webpack',
+    fourthParagrath: '…остальному - научим!',
+    hardSkillsTitle: 'Необходимо знание следующих стеков:',
+    conditionsListTitle: 'После испытательного срока мы предлагаем:',
+    conditionOne: 'возможную релокацию в любой из крупнейших городов России;',
+    conditionTwo: 'бесплатную стоянку рядом с современным офисом в центре города;',
+    conditionThree: 'медицинскую страховку;',
+    conditionFour: 'абонемент в спортивный зал.',
+    fifthParagrath: 'Наша сила - в отсутствии бюрократии, легаси кода, чайка менеджмента, бизнеса, который уже не знает, чего хочет.',
+    sixthParagrath: 'Мы за нестандартные идеи, профессиональный и творческий подход, отличные отношения в коллективе и результат.',
+  },
+  {
+    name: 'Smart Develop Inc',
+    payment: 'От 450 000 до 550 000 руб.',
+    firstParagrath: 'Мы занимаемся разработкой инновационных решений в области цифрового контента.',
+    secondParagrath: 'Для создания наших продуктов используются передовые технологии, среди которых: Computer Vision, Unreal Engine, Ultra Low Latency Video Streaming. У нас очень крутой и суперсовременный технопарк - от камер и света, до графических карт, которые почти невозможно найти.',
+    thirdParagrath: 'Сегодня мы на стадии активного развития. Мы создаём масштабный, технологически сложный и в тоже время очень интересный, глобальный проект - частью которого можете стать Вы!',
+    skillsTitle: 'Вам нужно иметь:',
+    skillOne: 'опыт коммерческой разработки на JavaScript от 5 лет;',
+    skillTwo: 'опыт коммерческой разработки на React от 3 лет;',
+    skillThree: 'опыт работы в команде с git;',
+    skillFour: 'опыт работы с webpack',
+    fourthParagrath: '…остальному - научим!',
+    hardSkillsTitle: 'Необходимо знание следующих стеков:',
+    conditionsListTitle: 'После испытательного срока мы предлагаем:',
+    conditionOne: 'возможную релокацию в Мельбурн (Австралия) или Осло (Португалия) с оформлением документов;',
+    conditionTwo: 'бесплатную стоянку рядом с современным офисом в центре города;',
+    conditionThree: 'медицинскую страховку;',
+    conditionFour: 'абонемент в спортивный зал.',
+    fifthParagrath: 'Наша сила - в отсутствии бюрократии, легаси кода, чайка менеджмента, бизнеса, который уже не знает, чего хочет.',
+    sixthParagrath: 'Мы за нестандартные идеи, профессиональный и творческий подход, отличные отношения в коллективе и результат.',
+  },
+  {
+    name: 'Digital Solutions',
+    payment: 'От 70 000 до 90 000 руб.',
+    firstParagrath: 'Мы занимаемся разработкой инновационных решений в области цифрового контента.',
+    secondParagrath: 'Для создания наших продуктов используются передовые технологии, среди которых: Computer Vision, Unreal Engine, Ultra Low Latency Video Streaming. У нас очень крутой и суперсовременный технопарк - от камер и света, до графических карт, которые почти невозможно найти.',
+    thirdParagrath: 'Сегодня мы на стадии активного развития. Мы создаём масштабный, технологически сложный и в тоже время очень интересный, глобальный проект - частью которого можете стать Вы!',
+    skillsTitle: 'Вам нужно иметь:',
+    skillOne: 'опыт коммерческой разработки на JavaScript от 2 лет;',
+    skillTwo: 'опыт коммерческой разработки на React от 2 лет;',
+    skillThree: 'опыт работы в команде с git;',
+    skillFour: 'опыт работы с webpack',
+    fourthParagrath: '…остальному - научим!',
+    hardSkillsTitle: 'Необходимо знание следующих стеков:',
+    conditionsListTitle: 'После испытательного срока мы предлагаем:',
+    conditionOne: 'возможную релокацию в столицу;',
+    conditionTwo: 'бесплатную стоянку рядом с современным офисом в центре города;',
+    conditionThree: 'медицинскую страховку;',
+    conditionFour: 'абонемент в спортивный зал.',
+    fifthParagrath: 'Наша сила - в отсутствии бюрократии, легаси кода, чайка менеджмента, бизнеса, который уже не знает, чего хочет.',
+    sixthParagrath: 'Мы за нестандартные идеи, профессиональный и творческий подход, отличные отношения в коллективе и результат.',
+  },
+]
+
+
+
+
+
+
+
+
 
 
 function handlePushingFilterButton(item) { // объявляем функцию с аргументами, реализующую открытие/закрытие меню кнопки фильтра;
