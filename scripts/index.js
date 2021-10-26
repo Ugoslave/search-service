@@ -307,8 +307,27 @@ function handlePushingFilterButton(item) { // объявляем функцию 
 }
 
 
+function handleCardClick(evt) {
+  cardImage = evt.target.closest('.vacancies__element');
+  cardTitle = cardImage.querySelector('.vacancies__company-name');
+  cardLogo = cardImage.querySelector('.vacancies__logo');
+  cardJobName = cardImage.querySelector('.vacancies__job-name');
+  cardLocation = cardImage.querySelector('.vacancies__company-location');
+
+
+  cardDescriptionLogoCompany.src = cardLogo.src;
+  cardDescriptionJobTitle.textContent = cardJobName.textContent;
+  cardDescriptionNameCompany.textContent = cardTitle.textContent;
+  cardDescriptionLocation.textContent = cardLocation.textContent;
+
+}
+
+
 function createCard(item) {
   const card = templateElement.content.cloneNode(true); // клонируем содержимое шаблона в проекте;
+
+  const cardImage = card.querySelector('.vacancies__element');
+
   const cardTitle = card.querySelector('.vacancies__job-name');
   const cardNameCompany = card.querySelector('.vacancies__company-name');
   const cardLocation = card.querySelector('.vacancies__company-location');
@@ -340,6 +359,8 @@ function createCard(item) {
   cardSeventhSkill.textContent = item.seventhSkill;
 
 
+  cardImage.addEventListener('click', handleCardClick);
+
   return card;
 }
 
@@ -357,14 +378,11 @@ renderCards();
 
 
 
-
-
-
-
-
 selectLocationButton.addEventListener('click', () => handlePushingFilterButton(selectLocationButton));
 selectSheduleButton.addEventListener('click', () => handlePushingFilterButton(selectSheduleButton));
 selectWorkTimeButton.addEventListener('click', () => handlePushingFilterButton(selectWorkTimeButton));
 selectWorkExperienceButton.addEventListener('click', () => handlePushingFilterButton(selectWorkExperienceButton));
 selectPaymentButton.addEventListener('click', () => handlePushingFilterButton(selectPaymentButton));
+
+
 
