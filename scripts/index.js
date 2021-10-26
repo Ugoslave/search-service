@@ -307,6 +307,8 @@ function handlePushingFilterButton(item) { // объявляем функцию 
 }
 
 
+
+
 function handleCardClick(evt) {
   cardImage = evt.target.closest('.vacancies__element');
   cardTitle = cardImage.querySelector('.vacancies__company-name');
@@ -319,6 +321,169 @@ function handleCardClick(evt) {
   cardDescriptionJobTitle.textContent = cardJobName.textContent;
   cardDescriptionNameCompany.textContent = cardTitle.textContent;
   cardDescriptionLocation.textContent = cardLocation.textContent;
+
+  switch (cardTitle.textContent) {
+    case cardDescription[0].name:
+      cardDescriptionPayment.textContent = cardDescription[0].payment;
+      cardDescriptionFirstText.textContent = cardDescription[0].firstParagrath;
+      cardDescriptionSecondText.textContent = cardDescription[0].secondParagrath;
+      cardDescriptionThirdText.textContent = cardDescription[0].thirdParagrath;
+      cardDescriptionFourthText.textContent = cardDescription[0].fourthParagrath;
+      cardDescriptionSkillList.textContent = cardDescription[0].skillsTitle;
+      cardDescriptionHardSkillList.textContent = cardDescription[0].hardSkillsTitle;
+      cardDescriptionConditionsList.textContent =cardDescription[0].conditionsListTitle;
+      cardDescriptionSkillOne.textContent = cardDescription[0].skillOne;
+      cardDescriptionSkillTwo.textContent = cardDescription[0].skillTwo;
+      cardDescriptionSkillThree.textContent = cardDescription[0].skillThree;
+      cardDescriptionSkillFour.textContent = cardDescription[0].skillFour;
+      cardDescriptionHardSkillOne.textContent = initialCards[0].firstSkill;
+      cardDescriptionHardSkillTwo.textContent = initialCards[0].secondSkill;
+      cardDescriptionHardSkillThree.textContent = initialCards[0].thirdSkill;
+      cardDescriptionHardSkillFour.textContent = initialCards[0].fourthSkill;
+      cardDescriptionHardSkillFive.textContent = initialCards[0].fifthSkill;
+      cardDescriptionHardSkillSix.textContent = initialCards[0].sixthSkill;
+      cardDescriptionHardSkillSeven.textContent = initialCards[0].seventhSkill;
+
+      break;
+
+    case cardDescription[1].name:
+      cardDescriptionPayment.textContent = cardDescription[1].payment;
+      cardDescriptionFirstText.textContent = cardDescription[1].firstParagrath;
+      cardDescriptionSecondText.textContent = cardDescription[1].secondParagrath;
+      cardDescriptionThirdText.textContent = cardDescription[1].thirdParagrath;
+      cardDescriptionFourthText.textContent = cardDescription[1].fourthParagrath;
+      cardDescriptionSkillList.textContent = cardDescription[1].skillsTitle;
+      cardDescriptionHardSkillList.textContent = cardDescription[1].hardSkillsTitle;
+      cardDescriptionConditionsList.textContent =cardDescription[1].conditionsListTitle;
+      cardDescriptionSkillOne.textContent = cardDescription[1].skillOne;
+      cardDescriptionSkillTwo.textContent = cardDescription[1].skillTwo;
+      cardDescriptionSkillThree.textContent = cardDescription[1].skillThree;
+      cardDescriptionSkillFour.textContent = cardDescription[1].skillFour;
+      cardDescriptionHardSkillOne.textContent = initialCards[1].firstSkill;
+      cardDescriptionHardSkillTwo.textContent = initialCards[1].secondSkill;
+      cardDescriptionHardSkillThree.textContent = initialCards[1].thirdSkill;
+      cardDescriptionHardSkillFour.textContent = initialCards[1].fourthSkill;
+      cardDescriptionHardSkillFive.textContent = initialCards[1].fifthSkill;
+      cardDescriptionHardSkillSix.textContent = initialCards[1].sixthSkill;
+      cardDescriptionHardSkillSeven.textContent = initialCards[1].seventhSkill;
+
+      break;
+      
+    case cardDescription[2].name:
+      cardDescriptionPayment.textContent = cardDescription[2].payment;
+      cardDescriptionFirstText.textContent = cardDescription[2].firstParagrath;
+      cardDescriptionSecondText.textContent = cardDescription[2].secondParagrath;
+      cardDescriptionThirdText.textContent = cardDescription[2].thirdParagrath;
+      cardDescriptionFourthText.textContent = cardDescription[2].fourthParagrath;
+      cardDescriptionSkillList.textContent = cardDescription[2].skillsTitle;
+      cardDescriptionHardSkillList.textContent = cardDescription[2].hardSkillsTitle;
+      cardDescriptionConditionsList.textContent =cardDescription[2].conditionsListTitle;
+      cardDescriptionSkillOne.textContent = cardDescription[2].skillOne;
+      cardDescriptionSkillTwo.textContent = cardDescription[2].skillTwo;
+      cardDescriptionSkillThree.textContent = cardDescription[2].skillThree;
+      cardDescriptionSkillFour.textContent = cardDescription[2].skillFour;
+      cardDescriptionHardSkillOne.textContent = initialCards[2].firstSkill;
+      cardDescriptionHardSkillTwo.textContent = initialCards[2].secondSkill;
+      cardDescriptionHardSkillThree.textContent = initialCards[2].thirdSkill;
+      cardDescriptionHardSkillFour.textContent = initialCards[2].fourthSkill;
+      cardDescriptionHardSkillFive.textContent = initialCards[2].fifthSkill;
+      cardDescriptionHardSkillSix.textContent = initialCards[2].sixthSkill;
+      cardDescriptionHardSkillSeven.textContent = initialCards[2].seventhSkill;
+    
+      break;
+
+    case cardDescription[3].name:
+      cardDescriptionPayment.textContent = cardDescription[3].payment;
+      cardDescriptionFirstText.textContent = cardDescription[3].firstParagrath;
+      cardDescriptionSecondText.textContent = cardDescription[3].secondParagrath;
+      cardDescriptionThirdText.textContent = cardDescription[3].thirdParagrath;
+      cardDescriptionFourthText.textContent = cardDescription[3].fourthParagrath;
+      cardDescriptionSkillList.textContent = cardDescription[3].skillsTitle;
+      cardDescriptionHardSkillList.textContent = cardDescription[3].hardSkillsTitle;
+      cardDescriptionConditionsList.textContent =cardDescription[3].conditionsListTitle;
+      cardDescriptionSkillOne.textContent = cardDescription[3].skillOne;
+      cardDescriptionSkillTwo.textContent = cardDescription[3].skillTwo;
+      cardDescriptionSkillThree.textContent = cardDescription[3].skillThree;
+      cardDescriptionSkillFour.textContent = cardDescription[3].skillFour;
+      cardDescriptionHardSkillOne.textContent = initialCards[3].firstSkill;
+      cardDescriptionHardSkillTwo.textContent = initialCards[3].secondSkill;
+      cardDescriptionHardSkillThree.textContent = initialCards[3].thirdSkill;
+      cardDescriptionHardSkillFour.textContent = initialCards[3].fourthSkill;
+      cardDescriptionHardSkillFive.textContent = initialCards[3].fifthSkill;
+      cardDescriptionHardSkillSix.textContent = initialCards[3].sixthSkill;
+      cardDescriptionHardSkillSeven.textContent = initialCards[3].seventhSkill;
+
+      break;
+
+    case cardDescription[4].name:
+      cardDescriptionPayment.textContent = cardDescription[4].payment;
+      cardDescriptionFirstText.textContent = cardDescription[4].firstParagrath;
+      cardDescriptionSecondText.textContent = cardDescription[4].secondParagrath;
+      cardDescriptionThirdText.textContent = cardDescription[4].thirdParagrath;
+      cardDescriptionFourthText.textContent = cardDescription[4].fourthParagrath;
+      cardDescriptionSkillList.textContent = cardDescription[4].skillsTitle;
+      cardDescriptionHardSkillList.textContent = cardDescription[4].hardSkillsTitle;
+      cardDescriptionConditionsList.textContent =cardDescription[4].conditionsListTitle;
+      cardDescriptionSkillOne.textContent = cardDescription[4].skillOne;
+      cardDescriptionSkillTwo.textContent = cardDescription[4].skillTwo;
+      cardDescriptionSkillThree.textContent = cardDescription[4].skillThree;
+      cardDescriptionSkillFour.textContent = cardDescription[4].skillFour;
+      cardDescriptionHardSkillOne.textContent = initialCards[4].firstSkill;
+      cardDescriptionHardSkillTwo.textContent = initialCards[4].secondSkill;
+      cardDescriptionHardSkillThree.textContent = initialCards[4].thirdSkill;
+      cardDescriptionHardSkillFour.textContent = initialCards[4].fourthSkill;
+      cardDescriptionHardSkillFive.textContent = initialCards[4].fifthSkill;
+      cardDescriptionHardSkillSix.textContent = initialCards[4].sixthSkill;
+      cardDescriptionHardSkillSeven.textContent = initialCards[4].seventhSkill;
+
+      break;
+
+    case cardDescription[5].name:
+      cardDescriptionPayment.textContent = cardDescription[5].payment;
+      cardDescriptionFirstText.textContent = cardDescription[5].firstParagrath;
+      cardDescriptionSecondText.textContent = cardDescription[5].secondParagrath;
+      cardDescriptionThirdText.textContent = cardDescription[5].thirdParagrath;
+      cardDescriptionFourthText.textContent = cardDescription[5].fourthParagrath;
+      cardDescriptionSkillList.textContent = cardDescription[5].skillsTitle;
+      cardDescriptionHardSkillList.textContent = cardDescription[5].hardSkillsTitle;
+      cardDescriptionConditionsList.textContent =cardDescription[5].conditionsListTitle;
+      cardDescriptionSkillOne.textContent = cardDescription[5].skillOne;
+      cardDescriptionSkillTwo.textContent = cardDescription[5].skillTwo;
+      cardDescriptionSkillThree.textContent = cardDescription[5].skillThree;
+      cardDescriptionSkillFour.textContent = cardDescription[5].skillFour;
+      cardDescriptionHardSkillOne.textContent = initialCards[5].firstSkill;
+      cardDescriptionHardSkillTwo.textContent = initialCards[5].secondSkill;
+      cardDescriptionHardSkillThree.textContent = initialCards[5].thirdSkill;
+      cardDescriptionHardSkillFour.textContent = initialCards[5].fourthSkill;
+      cardDescriptionHardSkillFive.textContent = initialCards[5].fifthSkill;
+      cardDescriptionHardSkillSix.textContent = initialCards[5].sixthSkill;
+      cardDescriptionHardSkillSeven.textContent = initialCards[5].seventhSkill;
+
+      break;
+
+    case cardDescription[6].name:
+      cardDescriptionPayment.textContent = cardDescription[6].payment;
+      cardDescriptionFirstText.textContent = cardDescription[6].firstParagrath;
+      cardDescriptionSecondText.textContent = cardDescription[6].secondParagrath;
+      cardDescriptionThirdText.textContent = cardDescription[6].thirdParagrath;
+      cardDescriptionFourthText.textContent = cardDescription[6].fourthParagrath;
+      cardDescriptionSkillList.textContent = cardDescription[6].skillsTitle;
+      cardDescriptionHardSkillList.textContent = cardDescription[6].hardSkillsTitle;
+      cardDescriptionConditionsList.textContent =cardDescription[6].conditionsListTitle;
+      cardDescriptionSkillOne.textContent = cardDescription[6].skillOne;
+      cardDescriptionSkillTwo.textContent = cardDescription[6].skillTwo;
+      cardDescriptionSkillThree.textContent = cardDescription[6].skillThree;
+      cardDescriptionSkillFour.textContent = cardDescription[6].skillFour;
+      cardDescriptionHardSkillOne.textContent = initialCards[6].firstSkill;
+      cardDescriptionHardSkillTwo.textContent = initialCards[6].secondSkill;
+      cardDescriptionHardSkillThree.textContent = initialCards[6].thirdSkill;
+      cardDescriptionHardSkillFour.textContent = initialCards[6].fourthSkill;
+      cardDescriptionHardSkillFive.textContent = initialCards[6].fifthSkill;
+      cardDescriptionHardSkillSix.textContent = initialCards[6].sixthSkill;
+      cardDescriptionHardSkillSeven.textContent = initialCards[6].seventhSkill;
+
+      break;
+  }
 
 }
 
